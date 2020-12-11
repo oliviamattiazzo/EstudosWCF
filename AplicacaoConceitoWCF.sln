@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1300
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciadorTarefas", "GerenciadorTarefas\GerenciadorTarefas.csproj", "{D9366E85-0900-4ACD-934F-76D7A5583E38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicoGerenciadorTarefas", "ServicoGerenciadorTarefas\ServicoGerenciadorTarefas.csproj", "{5B52C12F-5318-4B1D-B1C0-C20AFD65A6F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D9366E85-0900-4ACD-934F-76D7A5583E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9366E85-0900-4ACD-934F-76D7A5583E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9366E85-0900-4ACD-934F-76D7A5583E38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B52C12F-5318-4B1D-B1C0-C20AFD65A6F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B52C12F-5318-4B1D-B1C0-C20AFD65A6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B52C12F-5318-4B1D-B1C0-C20AFD65A6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B52C12F-5318-4B1D-B1C0-C20AFD65A6F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

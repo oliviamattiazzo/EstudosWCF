@@ -37,9 +37,10 @@
             this.txtTarefa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lstPendentes = new System.Windows.Forms.CheckedListBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lstConcluidas = new System.Windows.Forms.CheckedListBox();
+            this.lblMensagemErro = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -47,6 +48,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblMensagemErro);
             this.groupBox1.Controls.Add(this.btnLimpar);
             this.groupBox1.Controls.Add(this.btnInserir);
             this.groupBox1.Controls.Add(this.txtCalendario);
@@ -55,7 +57,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(403, 387);
+            this.groupBox1.Size = new System.Drawing.Size(403, 446);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastrar nova tarefa";
@@ -115,20 +117,10 @@
             this.groupBox2.Controls.Add(this.lstPendentes);
             this.groupBox2.Location = new System.Drawing.Point(421, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(392, 387);
+            this.groupBox2.Size = new System.Drawing.Size(392, 446);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tarefas pendentes";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.lstConcluidas);
-            this.groupBox3.Location = new System.Drawing.Point(819, 12);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(397, 387);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tarefas concluídas";
             // 
             // lstPendentes
             // 
@@ -138,6 +130,16 @@
             this.lstPendentes.Size = new System.Drawing.Size(380, 319);
             this.lstPendentes.TabIndex = 0;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lstConcluidas);
+            this.groupBox3.Location = new System.Drawing.Point(819, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(397, 446);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Tarefas concluídas";
+            // 
             // lstConcluidas
             // 
             this.lstConcluidas.FormattingEnabled = true;
@@ -146,11 +148,21 @@
             this.lstConcluidas.Size = new System.Drawing.Size(374, 319);
             this.lstConcluidas.TabIndex = 1;
             // 
+            // lblMensagemErro
+            // 
+            this.lblMensagemErro.AutoSize = true;
+            this.lblMensagemErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensagemErro.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblMensagemErro.Location = new System.Drawing.Point(67, 387);
+            this.lblMensagemErro.Name = "lblMensagemErro";
+            this.lblMensagemErro.Size = new System.Drawing.Size(0, 25);
+            this.lblMensagemErro.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1239, 407);
+            this.ClientSize = new System.Drawing.Size(1239, 470);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -178,6 +190,7 @@
         private System.Windows.Forms.CheckedListBox lstPendentes;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckedListBox lstConcluidas;
+        private System.Windows.Forms.Label lblMensagemErro;
     }
 }
 
