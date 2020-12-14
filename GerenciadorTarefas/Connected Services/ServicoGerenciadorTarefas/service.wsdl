@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TarefaService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ServicoGerenciadorTarefas.Modelos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITarefaService_Add_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="ITarefaService_Add_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarefaService_Finish_InputMessage">
+    <wsdl:part name="parameters" element="tns:Finish" />
+  </wsdl:message>
+  <wsdl:message name="ITarefaService_Finish_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FinishResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarefaService_Reopen_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reopen" />
+  </wsdl:message>
+  <wsdl:message name="ITarefaService_Reopen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReopenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarefaService_GetTarefasAbertas_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTarefasAbertas" />
+  </wsdl:message>
+  <wsdl:message name="ITarefaService_GetTarefasAbertas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTarefasAbertasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarefaService_GetTarefasConcluidas_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTarefasConcluidas" />
+  </wsdl:message>
+  <wsdl:message name="ITarefaService_GetTarefasConcluidas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTarefasConcluidasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITarefaService">
+    <wsdl:operation name="Add">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarefaService/Add" message="tns:ITarefaService_Add_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarefaService/AddResponse" message="tns:ITarefaService_Add_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Finish">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarefaService/Finish" message="tns:ITarefaService_Finish_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarefaService/FinishResponse" message="tns:ITarefaService_Finish_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reopen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarefaService/Reopen" message="tns:ITarefaService_Reopen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarefaService/ReopenResponse" message="tns:ITarefaService_Reopen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTarefasAbertas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarefaService/GetTarefasAbertas" message="tns:ITarefaService_GetTarefasAbertas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarefaService/GetTarefasAbertasResponse" message="tns:ITarefaService_GetTarefasAbertas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTarefasConcluidas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarefaService/GetTarefasConcluidas" message="tns:ITarefaService_GetTarefasConcluidas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarefaService/GetTarefasConcluidasResponse" message="tns:ITarefaService_GetTarefasConcluidas_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITarefaService" type="tns:ITarefaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/ITarefaService/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Finish">
+      <soap:operation soapAction="http://tempuri.org/ITarefaService/Finish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reopen">
+      <soap:operation soapAction="http://tempuri.org/ITarefaService/Reopen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTarefasAbertas">
+      <soap:operation soapAction="http://tempuri.org/ITarefaService/GetTarefasAbertas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTarefasConcluidas">
+      <soap:operation soapAction="http://tempuri.org/ITarefaService/GetTarefasConcluidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TarefaService">
+    <wsdl:port name="BasicHttpBinding_ITarefaService" binding="tns:BasicHttpBinding_ITarefaService">
+      <soap:address location="http://localhost:8080/tarefas" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -8,3 +8,13 @@ C:\Projetos\Git\AplicacaoConceitoWCF\GerenciadorTarefas\obj\Debug\GerenciadorTar
 C:\Projetos\Git\AplicacaoConceitoWCF\GerenciadorTarefas\obj\Debug\GerenciadorTarefas.csproj.CoreCompileInputs.cache
 C:\Projetos\Git\AplicacaoConceitoWCF\GerenciadorTarefas\obj\Debug\GerenciadorTarefas.exe
 C:\Projetos\Git\AplicacaoConceitoWCF\GerenciadorTarefas\obj\Debug\GerenciadorTarefas.pdb
+C:\Projetos\Git\EstudosWCF\GerenciadorTarefas\bin\Debug\GerenciadorTarefas.exe.config
+C:\Projetos\Git\EstudosWCF\GerenciadorTarefas\bin\Debug\GerenciadorTarefas.exe
+C:\Projetos\Git\EstudosWCF\GerenciadorTarefas\bin\Debug\GerenciadorTarefas.pdb
+C:\Projetos\Git\EstudosWCF\GerenciadorTarefas\obj\Debug\GerenciadorTarefas.csprojAssemblyReference.cache
+C:\Projetos\Git\EstudosWCF\GerenciadorTarefas\obj\Debug\GerenciadorTarefas.Form1.resources
+C:\Projetos\Git\EstudosWCF\GerenciadorTarefas\obj\Debug\GerenciadorTarefas.Properties.Resources.resources
+C:\Projetos\Git\EstudosWCF\GerenciadorTarefas\obj\Debug\GerenciadorTarefas.csproj.GenerateResource.cache
+C:\Projetos\Git\EstudosWCF\GerenciadorTarefas\obj\Debug\GerenciadorTarefas.csproj.CoreCompileInputs.cache
+C:\Projetos\Git\EstudosWCF\GerenciadorTarefas\obj\Debug\GerenciadorTarefas.exe
+C:\Projetos\Git\EstudosWCF\GerenciadorTarefas\obj\Debug\GerenciadorTarefas.pdb

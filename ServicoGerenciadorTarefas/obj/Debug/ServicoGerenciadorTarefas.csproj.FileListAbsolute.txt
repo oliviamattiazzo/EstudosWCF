@@ -1,0 +1,6 @@
+C:\Projetos\Git\EstudosWCF\ServicoGerenciadorTarefas\bin\Debug\ServicoGerenciadorTarefas.dll.config
+C:\Projetos\Git\EstudosWCF\ServicoGerenciadorTarefas\bin\Debug\ServicoGerenciadorTarefas.dll
+C:\Projetos\Git\EstudosWCF\ServicoGerenciadorTarefas\bin\Debug\ServicoGerenciadorTarefas.pdb
+C:\Projetos\Git\EstudosWCF\ServicoGerenciadorTarefas\obj\Debug\ServicoGerenciadorTarefas.csproj.CoreCompileInputs.cache
+C:\Projetos\Git\EstudosWCF\ServicoGerenciadorTarefas\obj\Debug\ServicoGerenciadorTarefas.dll
+C:\Projetos\Git\EstudosWCF\ServicoGerenciadorTarefas\obj\Debug\ServicoGerenciadorTarefas.pdb

@@ -9,7 +9,7 @@ namespace ServicoGerenciadorTarefas.DAOs
 {
     public class TarefasDAO
     {
-        public List<Tarefa> lstTarefas = new List<Tarefa>();
+        public static List<Tarefa> lstTarefas = new List<Tarefa>();
 
         public void Adicionar(Tarefa novaTarefa)
         {
