@@ -29,6 +29,9 @@ namespace GerenciadorTarefas.ServicoGerenciadorTarefas {
         private string DescricaoTarefaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdTarefaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool TarefaConcluidaField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -63,6 +66,19 @@ namespace GerenciadorTarefas.ServicoGerenciadorTarefas {
                 if ((object.ReferenceEquals(this.DescricaoTarefaField, value) != true)) {
                     this.DescricaoTarefaField = value;
                     this.RaisePropertyChanged("DescricaoTarefa");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTarefa {
+            get {
+                return this.IdTarefaField;
+            }
+            set {
+                if ((this.IdTarefaField.Equals(value) != true)) {
+                    this.IdTarefaField = value;
+                    this.RaisePropertyChanged("IdTarefa");
                 }
             }
         }

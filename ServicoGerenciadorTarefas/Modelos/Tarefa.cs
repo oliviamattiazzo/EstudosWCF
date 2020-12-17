@@ -8,7 +8,7 @@ namespace ServicoGerenciadorTarefas.Modelos
 {
     public class Tarefa
     {
-        public int IdTarefa { get; private set; }
+        public int IdTarefa { get; set; }
 
         public string DescricaoTarefa { get; set; }
 

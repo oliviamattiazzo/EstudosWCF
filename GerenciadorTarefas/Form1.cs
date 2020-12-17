@@ -55,7 +55,7 @@ namespace GerenciadorTarefas
             tarefasPendentes = servico.GetTarefasAbertas().ToList();
 
             tarefasPendentes.ForEach(p => {
-                lstPendentes.Items.Add($"{p.DataTarefa.ToShortDateString()} - {p.DescricaoTarefa}");
+                lstPendentes.Items.Add(RetornaItemListaFormatado(p.IdTarefa, p.DataTarefa, p.DescricaoTarefa));
             });
         }
 
@@ -67,8 +67,65 @@ namespace GerenciadorTarefas
 
         private void lstPendentes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Tarefa tarefa = new Tarefa();
-            
+            try
+            {
+                TarefaServiceClient servico = new TarefaServiceClient();
+
+                CheckedListBox lstTarefas = (CheckedListBox)sender;
+                string selectedIndex = lstTarefas.SelectedItem.ToString();
+
+                int idTarefa = int.Parse(selectedIndex.Split(':')[0].Remove(0, 1)) - 1;
+
+                servico.Finish(idTarefa);
+
+                MessageBox.Show($"Tarefa concluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                AtualizaListaTarefasConcluidas();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private string RetornaItemListaFormatado(int idTarefa, DateTime dtTarefa, string descricaoTarefa)
+        {
+            return $"#{idTarefa + 1}: {dtTarefa.ToShortDateString()} - {descricaoTarefa}";
+        }
+
+        private void AtualizaListaTarefasConcluidas()
+        {
+            TarefaServiceClient servico = new TarefaServiceClient();
+            List<Tarefa> tarefasConcluidas = new List<Tarefa>();
+
+            tarefasConcluidas = servico.GetTarefasConcluidas().ToList();
+
+            tarefasConcluidas.ForEach(p => {
+                lstConcluidas.Items.Add(RetornaItemListaFormatado(p.IdTarefa, p.DataTarefa, p.DescricaoTarefa), true);
+            });
+        }
+
+        private void lstConcluidas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                TarefaServiceClient servico = new TarefaServiceClient();
+
+                CheckedListBox lstTarefas = (CheckedListBox)sender;
+                string selectedIndex = lstTarefas.SelectedItem.ToString();
+
+                int idTarefa = int.Parse(selectedIndex.Split(':')[0].Remove(0, 1)) - 1;
+
+                servico.Reopen(idTarefa);
+
+                MessageBox.Show($"Tarefa reaberta com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                AtualizaListaTarefasPendentes();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

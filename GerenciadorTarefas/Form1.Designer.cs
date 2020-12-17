@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCalendario = new System.Windows.Forms.DateTimePicker();
             this.lblMensagemErro = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.lstPendentes = new System.Windows.Forms.CheckedListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lstConcluidas = new System.Windows.Forms.CheckedListBox();
-            this.txtCalendario = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -61,6 +61,13 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastrar nova tarefa";
+            // 
+            // txtCalendario
+            // 
+            this.txtCalendario.Location = new System.Drawing.Point(71, 76);
+            this.txtCalendario.Name = "txtCalendario";
+            this.txtCalendario.Size = new System.Drawing.Size(318, 26);
+            this.txtCalendario.TabIndex = 6;
             // 
             // lblMensagemErro
             // 
@@ -153,13 +160,7 @@
             this.lstConcluidas.Name = "lstConcluidas";
             this.lstConcluidas.Size = new System.Drawing.Size(374, 319);
             this.lstConcluidas.TabIndex = 1;
-            // 
-            // txtCalendario
-            // 
-            this.txtCalendario.Location = new System.Drawing.Point(71, 76);
-            this.txtCalendario.Name = "txtCalendario";
-            this.txtCalendario.Size = new System.Drawing.Size(318, 26);
-            this.txtCalendario.TabIndex = 6;
+            this.lstConcluidas.SelectedIndexChanged += new System.EventHandler(this.lstConcluidas_SelectedIndexChanged);
             // 
             // Form1
             // 

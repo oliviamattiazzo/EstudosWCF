@@ -4,6 +4,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="DataTarefa" type="xs:dateTime" />
       <xs:element minOccurs="0" name="DescricaoTarefa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTarefa" type="xs:int" />
       <xs:element minOccurs="0" name="TarefaConcluida" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
