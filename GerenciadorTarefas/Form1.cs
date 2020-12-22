@@ -54,7 +54,9 @@ namespace GerenciadorTarefas
 
             tarefasPendentes = servico.GetTarefasAbertas().ToList();
 
-            tarefasPendentes.ForEach(p => {
+            lstPendentes.Items.Clear();
+            tarefasPendentes.ForEach(p =>
+            {
                 lstPendentes.Items.Add(RetornaItemListaFormatado(p.IdTarefa, p.DataTarefa, p.DescricaoTarefa));
             });
         }
@@ -81,6 +83,7 @@ namespace GerenciadorTarefas
                 MessageBox.Show($"Tarefa concluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
 
                 AtualizaListaTarefasConcluidas();
+                AtualizaListaTarefasPendentes();
             }
             catch (Exception ex)
             {
@@ -100,7 +103,9 @@ namespace GerenciadorTarefas
 
             tarefasConcluidas = servico.GetTarefasConcluidas().ToList();
 
-            tarefasConcluidas.ForEach(p => {
+            lstConcluidas.Items.Clear();
+            tarefasConcluidas.ForEach(p =>
+            {
                 lstConcluidas.Items.Add(RetornaItemListaFormatado(p.IdTarefa, p.DataTarefa, p.DescricaoTarefa), true);
             });
         }
@@ -121,6 +126,7 @@ namespace GerenciadorTarefas
                 MessageBox.Show($"Tarefa reaberta com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
 
                 AtualizaListaTarefasPendentes();
+                AtualizaListaTarefasConcluidas();
             }
             catch (Exception ex)
             {
